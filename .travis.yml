@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - '8'
+script:
+  - zip -r acf-commonmark.zip . -x \*.git\*
+deploy:
+  provider: releases
+  api_key: '$GITHUB_API_KEY'
+  file: "acf-commonmark.zip"
+  skip_cleanup: true
+  on:
+    tags: true
