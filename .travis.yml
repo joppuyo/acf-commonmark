@@ -2,7 +2,9 @@ language: node_js
 node_js:
   - '8'
 script:
-  - zip -r acf-commonmark.zip . -x \*.git\*
+  - npx webpack -p
+  - rm -fr node_modules && rm -fr .git && rm -f .editorconfig .prettierrc.js .travis.yml package-lock.json package.json webpack.config.js
+  - zip -r acf-commonmark.zip .
 deploy:
   provider: releases
   api_key: '$GITHUB_API_KEY'
