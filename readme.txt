@@ -27,6 +27,9 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 1.0.2 =
+* Add source map support
+
 = 1.0.1 =
 * Fix issue with build pipeline
 
