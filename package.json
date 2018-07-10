@@ -1,0 +1,30 @@
+{
+  "name": "acf-commonmark",
+  "version": "1.0.0",
+  "description": "Welcome to the Advanced Custom Fields CommonMark repository on Github.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joppuyo/acf-commonmark.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joppuyo/acf-commonmark/issues"
+  },
+  "homepage": "https://github.com/joppuyo/acf-commonmark#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "markdown-it": "^8.4.1",
+    "prettier": "^1.13.7",
+    "webpack": "^4.15.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.0.8"
+  }
+}

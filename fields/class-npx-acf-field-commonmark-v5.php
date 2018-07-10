@@ -139,18 +139,18 @@ class npx_acf_field_commonmark extends acf_field {
 		*  This will show what data is available
 		*/
 		
-		echo '<pre>';
-			print_r( $field );
-		echo '</pre>';
+		//echo '<pre>';
+		//print_r( $field );
+		//echo '</pre>';
 		
 		
 		/*
 		*  Create a simple text input using the 'font_size' setting.
 		*/
-		
-		?>
-		<input type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" />
-		<?php
+
+		echo '<textarea name="' . esc_attr($field['name']) . '">';
+        echo esc_attr($field['value']);
+        echo '</textarea>';
 	}
 	
 		
@@ -168,8 +168,6 @@ class npx_acf_field_commonmark extends acf_field {
 	*  @return	n/a
 	*/
 
-	/*
-	
 	function input_admin_enqueue_scripts() {
 		
 		// vars
@@ -178,19 +176,16 @@ class npx_acf_field_commonmark extends acf_field {
 		
 		
 		// register & include JS
-		wp_register_script('acf-commonmark', "{$url}assets/js/input.js", array('acf-input'), $version);
+		wp_register_script('acf-commonmark', "{$url}assets/dist/script.bundle.js", ['acf-input'], $version);
 		wp_enqueue_script('acf-commonmark');
 		
 		
 		// register & include CSS
-		wp_register_style('acf-commonmark', "{$url}assets/css/input.css", array('acf-input'), $version);
-		wp_enqueue_style('acf-commonmark');
+		//wp_register_style('acf-commonmark', "{$url}assets/css/input.css", array('acf-input'), $version);
+		//wp_enqueue_style('acf-commonmark');
 		
 	}
-	
-	*/
-	
-	
+
 	/*
 	*  input_admin_head()
 	*
