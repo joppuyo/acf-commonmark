@@ -28,6 +28,9 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 1.0.4 =
+* Remove .gitignore from build zip
+
 = 1.0.3 =
 * Update readme
 
