@@ -1,17 +1,17 @@
 === Advanced Custom Fields: CommonMark Field ===
 Contributors: Johannes Siipola
 Tags: acf, advanced custom fields, markdown
-Requires at least: 3.6.0
-Tested up to: 4.9.0
+Requires at least: 4.9.7
+Tested up to: 4.9.7
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Markdown (CommonMark) field for Advanced custom fields
+Markdown (CommonMark) field for Advanced Custom Fields
 
 == Description ==
 
-Markdown (CommonMark) field for Advanced custom fields
+An extension to Advanced Custom Fields that allows you to write text in Markdown format, using the CommonMark standard. Includes a preview mode.
 
 = Compatibility =
 
