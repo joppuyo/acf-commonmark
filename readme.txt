@@ -1,8 +1,9 @@
 === Advanced Custom Fields: CommonMark Field ===
-Contributors: Johannes Siipola
+Contributors: joppuyo
 Tags: acf, advanced custom fields, markdown
-Requires at least: 4.9.7
+Requires at least: 4.9.0
 Tested up to: 4.9.7
+Requires PHP: 5.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
