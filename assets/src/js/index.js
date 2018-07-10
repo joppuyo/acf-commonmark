@@ -1,4 +1,6 @@
 import autosize from 'autosize';
+import markdownIt from 'markdown-it';
+import { debounce } from 'lodash';
 
 (function($) {
   /**
@@ -15,6 +17,24 @@ import autosize from 'autosize';
 
   function initialize_field($field) {
     autosize($($field).find('textarea'));
+
+    let initialValue = $field.find('.js-acf-field-commonmark-textarea').val();
+    update_preview($field, initialValue);
+
+    $field.find('.js-acf-field-commonmark-textarea').off();
+    $field.find('.js-acf-field-commonmark-textarea').on(
+      'change keyup paste',
+      debounce(event => {
+        let value = $(event.currentTarget).val();
+        update_preview($field, value);
+      }, 500)
+    );
+  }
+
+  function update_preview($field, value) {
+    let commonMark = markdownIt('commonmark');
+    let html = commonMark.render(value);
+    $field.find('.js-acf-field-commonmark-preview').html(html);
   }
 
   function update_field($field) {

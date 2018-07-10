@@ -1,0 +1,52 @@
+#poststuff .stuffbox .acf-field-commonmark__preview > h3,
+#poststuff .acf-field-commonmark__preview h2,
+#poststuff .acf-field-commonmark__preview h3.hndle {
+  font-size: initial;
+  padding: initial;
+  margin: initial;
+  line-height: initial;
+}
+
+@media screen and (max-width: 782px) {
+  #poststuff .stuffbox .acf-field-commonmark__preview > h3,
+  #poststuff .acf-field-commonmark__preview h2,
+  #poststuff .acf-field-commonmark__preview h3.hndle {
+    padding: initial;
+  }
+}
+
+.postbox .inside .acf-field-commonmark__preview h2,
+.wrap [class$='icon32'] .acf-field-commonmark__preview + h2,
+.wrap .acf-field-commonmark__preview h1,
+.wrap .acf-field-commonmark__preview > h2:first-child {
+  font-size: initial;
+  font-weight: initial;
+  margin: initial;
+  padding: initial;
+  line-height: initial;
+}
+
+.metabox-holder .postbox .acf-field-commonmark__preview > h3,
+.metabox-holder .stuffbox .acf-field-commonmark__preview > h3,
+.metabox-holder .acf-field-commonmark__preview h2.hndle,
+.metabox-holder .acf-field-commonmark__preview h3.hndle {
+  font-size: initial;
+  padding: initial;
+  margin: initial;
+  line-height: initial;
+}
+
+@media screen and (max-width: 782px) {
+  .metabox-holder .postbox .acf-field-commonmark__preview > h3,
+  .metabox-holder .stuffbox .acf-field-commonmark__preview > h3,
+  .metabox-holder .acf-field-commonmark__preview h2,
+  .metabox-holder .acf-field-commonmark__preview h3.hndle {
+    padding: initial;
+  }
+}
+
+.markdown-body p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}

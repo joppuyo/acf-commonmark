@@ -132,10 +132,17 @@ class npx_acf_field_commonmark extends acf_field
         /*
         *  Create a simple text input using the 'font_size' setting.
         */
-
-        echo '<textarea name="' . esc_attr($field['name']) . '">';
+        echo '<div class="acf-field-commonmark js-acf-field-commonmark">';
+        echo '  <div class="acf-field-commonmark__code">';
+        echo '<textarea class="acf-field-commonmark__textarea js-acf-field-commonmark-textarea" name="' . esc_attr($field['name']) . '">';
         echo esc_attr($field['value']);
         echo '</textarea>';
+        echo '  </div>';
+        echo '  <div class="">';
+        echo '  <div class="acf-field-commonmark__preview markdown-body cleanslate js-acf-field-commonmark-preview">';
+        echo '  </div>';
+        echo '  </div>';
+        echo '</div>';
     }
 
     /*
@@ -163,8 +170,8 @@ class npx_acf_field_commonmark extends acf_field
         wp_enqueue_script('acf-commonmark');
 
         // register & include CSS
-        //wp_register_style('acf-commonmark', "{$url}assets/css/input.css", array('acf-input'), $version);
-        //wp_enqueue_style('acf-commonmark');
+        wp_register_style('acf-commonmark', "{$url}assets/dist/style.css", ['acf-input'], $version);
+        wp_enqueue_style('acf-commonmark');
     }
 
     /*
