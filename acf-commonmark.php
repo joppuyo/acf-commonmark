@@ -50,7 +50,6 @@ class npx_acf_plugin_commonmark {
 		
 		// include field
 		add_action('acf/include_field_types', 	array($this, 'include_field')); // v5
-		add_action('acf/register_fields', 		array($this, 'include_field')); // v4
 	}
 	
 	
@@ -74,7 +73,7 @@ class npx_acf_plugin_commonmark {
 		
 		
 		// include
-		include_once('fields/class-npx-acf-field-commonmark-v' . $version . '.php');
+		include_once('fields/class-npx-acf-field-commonmark-v5.php');
 	}
 	
 }
