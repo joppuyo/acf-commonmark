@@ -28,6 +28,9 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 1.0.3 =
+* Update readme
+
 = 1.0.2 =
 * Add source map support
 
