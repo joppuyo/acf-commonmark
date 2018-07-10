@@ -3,8 +3,8 @@
 /*
 Plugin Name: Advanced Custom Fields: CommonMark
 Plugin URI: https://github.com/joppuyo/acf-commonmark
-Description: Markdown (CommonMark) field for Advanced custom fields
-Version: 1.0.0
+Description: Markdown (CommonMark) field for Advanced Custom Fields
+Version: 1.0.1
 Author: Johannes Siipola
 Author URI: https://siipo.la
 License: GPLv2 or later
