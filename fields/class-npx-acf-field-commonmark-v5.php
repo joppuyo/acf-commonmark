@@ -129,17 +129,44 @@ class npx_acf_field_commonmark extends acf_field
         //print_r( $field );
         //echo '</pre>';
 
-        /*
-        *  Create a simple text input using the 'font_size' setting.
-        */
+        $iconPreview = file_get_contents(plugin_dir_path( __FILE__ ) . '../assets/images/icon-preview.svg');
+        $iconCode = file_get_contents(plugin_dir_path( __FILE__ ) . '../assets/images/icon-code.svg');
+
         echo '<div class="acf-field-commonmark js-acf-field-commonmark">';
-        echo '  <div class="acf-field-commonmark__code">';
-        echo '<textarea class="acf-field-commonmark__textarea js-acf-field-commonmark-textarea" name="' . esc_attr($field['name']) . '">';
-        echo esc_attr($field['value']);
-        echo '</textarea>';
+        echo '  <div class="acf-field-commonmark__code-tab js-acf-field-commonmark-code-tab">';
+        echo '    <div class="acf-field-commonmark__tab-container">';
+        echo '      <button class="acf-field-commonmark__tab acf-field-commonmark__tab--active js-acf-field-commonmark-tab"
+                            data-target="code">';
+        echo '        ' . $iconCode;
+        echo '        <div data-title="Write">Write</div>';
+        echo '      </button>';
+        echo '      <button class="acf-field-commonmark__tab acf-field-commonmark__tab--last js-acf-field-commonmark-tab"
+                            data-target="preview">';
+        echo '        ' . $iconPreview;
+        echo '        <div data-title="Preview">Preview</div>';
+        echo '      </button>';
+        echo '      <div class="acf-field-commonmark__spacer"></div>';
+        echo '    </div>';
+        echo '    <textarea class="acf-field-commonmark__textarea js-acf-field-commonmark-textarea"
+                            rows="1"
+                            placeholder="Select this field to start writing"
+                            name="' . esc_attr($field['name']) . '">' . esc_attr($field['value']) . '</textarea>';
         echo '  </div>';
-        echo '  <div class="">';
-        echo '  <div class="acf-field-commonmark__preview markdown-body cleanslate js-acf-field-commonmark-preview">';
+        echo '  <div class="acf-field-commonmark__preview-tab js-acf-field-commonmark-preview-tab" style="display: none">';
+        echo '    <div class="acf-field-commonmark__tab-container">';
+        echo '      <button class="acf-field-commonmark__tab js-acf-field-commonmark-tab"
+                            data-target="code">';
+        echo '        ' . $iconCode;
+        echo '        <div data-title="Write">Write</div>';
+        echo '      </button>';
+        echo '      <button class="acf-field-commonmark__tab acf-field-commonmark__tab--last acf-field-commonmark__tab--active js-acf-field-commonmark-tab"
+                            data-target="preview">';
+        echo '        ' . $iconPreview;
+        echo '        <div data-title="Preview">Preview</div>';
+        echo '      </button>';
+        echo '      <div class="acf-field-commonmark__spacer"></div>';
+        echo '    </div>';
+        echo '    <div class="acf-field-commonmark__preview markdown-body js-acf-field-commonmark-preview">';
         echo '  </div>';
         echo '  </div>';
         echo '</div>';

@@ -1,0 +1,82 @@
+.acf-field {
+  .acf-field-commonmark__textarea {
+    border: none;
+    box-shadow: none;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
+      monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 15px;
+    &:active,
+    &:focus,
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  .acf-field-commonmark {
+    border: 1px solid #dfdfdf;
+  }
+
+  .acf-field-commonmark__tab-container {
+    height: 38px;
+    display: flex;
+    background-color: #f9f9f9;
+  }
+
+  .acf-field-commonmark__tab {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    appearance: none;
+    height: 38px;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+    border-bottom: 1px solid #dfdfdf;
+    &:not(.acf-field-commonmark__tab--last) {
+      border-right: 1px solid #dfdfdf;
+    }
+    div {
+      text-align: center;
+      opacity: 0.5;
+      &::after {
+        display: block;
+        content: attr(data-title);
+        font-weight: 700;
+        height: 1px;
+        color: transparent;
+        overflow: hidden;
+        visibility: hidden;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  .acf-field-commonmark__tab svg {
+    margin-right: 10px;
+    opacity: 0.5;
+  }
+
+  .acf-field-commonmark__tab--active {
+    background-color: white;
+    border-bottom-color: transparent;
+    border-right: 1px solid #dfdfdf;
+    font-weight: 700;
+    svg,
+    div {
+      opacity: 1;
+    }
+  }
+
+  .acf-field-commonmark__spacer {
+    border-bottom: 1px solid #dfdfdf;
+    flex-grow: 1;
+  }
+
+  .acf-field-commonmark__preview {
+    padding: 15px;
+  }
+}

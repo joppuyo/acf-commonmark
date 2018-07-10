@@ -29,6 +29,20 @@ import { debounce } from 'lodash';
         update_preview($field, value);
       }, 500)
     );
+
+    $field.find('.js-acf-field-commonmark-tab').off();
+    $field.find('.js-acf-field-commonmark-tab').on('click', event => {
+      event.preventDefault();
+      let target = $(event.currentTarget).data('target');
+      if (target === 'preview') {
+        $field.find('.js-acf-field-commonmark-code-tab').hide();
+        $field.find('.js-acf-field-commonmark-preview-tab').show();
+      }
+      if (target === 'code') {
+        $field.find('.js-acf-field-commonmark-code-tab').show();
+        $field.find('.js-acf-field-commonmark-preview-tab').hide();
+      }
+    });
   }
 
   function update_preview($field, value) {
