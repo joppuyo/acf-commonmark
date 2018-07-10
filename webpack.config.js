@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = {
+module.exports = (env, argv) => ({
   entry: {
     script: './assets/src/js/index.js',
     style: './assets/src/scss/input.scss',
@@ -20,6 +20,8 @@ module.exports = {
     }),
   ],
   mode: 'development',
+  devtool:
+    argv.mode === 'production' ? 'source-map' : 'cheap-module-source-map',
   module: {
     rules: [
       {
@@ -34,8 +36,22 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
       },
     ],
   },
-};
+});
