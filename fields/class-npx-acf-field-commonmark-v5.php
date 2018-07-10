@@ -38,24 +38,20 @@ class npx_acf_field_commonmark extends acf_field
         *  category (string) basic | content | choice | relational | jquery | layout | CUSTOM GROUP NAME
         */
 
-        $this->category = 'basic';
+        $this->category = 'content';
 
         /*
         *  defaults (array) Array of default settings which are merged into the field object. These are used later in settings
         */
 
-        $this->defaults = array(
-          'font_size' => 14,
-        );
+        $this->defaults = [];
 
         /*
         *  l10n (array) Array of strings that are used in JavaScript. This allows JS strings to be translated in PHP and loaded via:
         *  var message = acf._e('commonmark', 'error');
         */
 
-        $this->l10n = array(
-          'error' => __('Error! Please enter a higher value', 'acf-commonmark'),
-        );
+        $this->l10n = [];
 
         /*
         *  settings (array) Store plugin settings (url, path, version) as a reference for later use with assets
@@ -93,14 +89,6 @@ class npx_acf_field_commonmark extends acf_field
         *  Please note that you must also have a matching $defaults value for the field name (font_size)
         */
 
-        acf_render_field_setting($field, array(
-          'label' => __('Font Size', 'acf-commonmark'),
-          'instructions' => __('Customise the input font size', 'acf-commonmark'),
-          'type' => 'number',
-          'name' => 'font_size',
-          'prepend' => 'px',
-        ));
-
     }
 
     /*
@@ -124,10 +112,6 @@ class npx_acf_field_commonmark extends acf_field
         *  Review the data of $field.
         *  This will show what data is available
         */
-
-        //echo '<pre>';
-        //print_r( $field );
-        //echo '</pre>';
 
         $iconPreview = file_get_contents(plugin_dir_path( __FILE__ ) . '../assets/images/icon-preview.svg');
         $iconCode = file_get_contents(plugin_dir_path( __FILE__ ) . '../assets/images/icon-code.svg');

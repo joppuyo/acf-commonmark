@@ -42,11 +42,11 @@ if (!class_exists('npx_acf_plugin_commonmark')) {
         {
             // settings
             // - these will be passed into the field class.
-            $this->settings = array(
+            $this->settings = [
               'version' => '1.0.0',
               'url' => plugin_dir_url(__FILE__),
               'path' => plugin_dir_path(__FILE__)
-            );
+            ];
 
             // include field
             add_action('acf/include_field_types', array($this, 'include_field')); // v5
