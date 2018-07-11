@@ -6,9 +6,17 @@ script:
   - rm -fr node_modules && rm -fr .git && rm -f .gitignore .editorconfig .prettierrc.js .travis.yml package-lock.json package.json webpack.config.js
   - zip -r acf-commonmark.zip .
 deploy:
-  provider: releases
-  api_key: '$GITHUB_API_KEY'
-  file: "acf-commonmark.zip"
-  skip_cleanup: true
-  on:
-    tags: true
+  - provider: releases
+    api_key: '$GITHUB_API_KEY'
+    file: "acf-commonmark.zip"
+    skip_cleanup: true
+    on:
+      tags: true
+  - provider: script
+    script: deploy/deploy.sh
+    # Restrict deployment only for tags
+    on:
+      tags: true
+env:
+  global:
+  - SVN_REPOSITORY=https://plugins.svn.wordpress.org/acf-commonmark

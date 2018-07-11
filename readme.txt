@@ -26,6 +26,11 @@ This ACF field type is compatible with:
 3. Create a new field via ACF and select the CommonMark type
 4. Read the description above for usage instructions
 
+== Screenshots ==
+
+1. Writing mode
+2. Preview mode
+
 == Changelog ==
 
 = 1.0.4 =
