@@ -3,9 +3,11 @@ node_js:
   - '8'
 script:
   - npx webpack -p
-  - ls -al; tree || true
+  - ls -al
 before_deploy:
-  - mkdir acf-commonmark
+  - ls -al
+  - mkdir -p acf-commonmark
+  - ls -al
   - cp -r *.php *.md assets fields lang acf-commonmark
   - zip -r acf-commonmark.zip acf-commonmark
 deploy:
