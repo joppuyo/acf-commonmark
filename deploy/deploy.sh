@@ -13,6 +13,7 @@ cd ../svn/trunk/
 # mv ./assets/ ../assets/
 
 # 5. Clean up unnecessary files
+rm -rf .git/
 rm -rf deploy/
 rm .travis.yml
 

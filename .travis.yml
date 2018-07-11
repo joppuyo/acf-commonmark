@@ -1,9 +1,12 @@
+branches:
+  only:
+  - "/v\\d\\.\\d\\.\\d/"
 language: node_js
 node_js:
   - '8'
 script:
   - npx webpack -p
-  - rm -fr node_modules && rm -fr .git && rm -f .gitignore .editorconfig .prettierrc.js .travis.yml package-lock.json package.json webpack.config.js
+  - rm -fr node_modules
   - zip -r acf-commonmark.zip .
 deploy:
   - provider: releases
