@@ -8,7 +8,7 @@ before_deploy:
   - ls -al
   - mkdir -p acf-commonmark
   - ls -al
-  - cp -r *.php *.md assets fields lang acf-commonmark
+  - cp -r *.php *.md readme.txt assets fields lang acf-commonmark
   - zip -r acf-commonmark.zip acf-commonmark
 deploy:
   - provider: releases
