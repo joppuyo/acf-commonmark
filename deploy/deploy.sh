@@ -16,14 +16,12 @@ cd ../svn/trunk/
 rm -rf .git/
 rm -rf deploy/
 rm .travis.yml
+rm acf-commonmark.zip
 
 # 6. Go to SVN repository root
 cd ../
 
 svn add trunk/*
-
-# 7. Create SVN tag
-svn cp trunk tags/$TRAVIS_TAG
 
 # 8. Push SVN tag
 svn ci  --message "Release $TRAVIS_TAG" \
