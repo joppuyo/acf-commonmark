@@ -33,6 +33,9 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 1.0.11 =
+* Fix issue where bullet points are missing in unordered list
+
 = 1.0.10 =
 * Deploy to w.org
 
