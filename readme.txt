@@ -33,7 +33,7 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
-= 1.0.5 =
+= 1.0.6 =
 * Deploy to w.org
 
 = 1.0.4 =
