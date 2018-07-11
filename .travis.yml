@@ -18,7 +18,7 @@ deploy:
     on:
       tags: true
   - provider: script
-    script: deploy.sh
+    script: './deploy.sh'
     skip_cleanup: true
     # Restrict deployment only for tags
     on:
