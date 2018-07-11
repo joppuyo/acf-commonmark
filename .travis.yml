@@ -1,13 +1,12 @@
-branches:
-  only:
-  - "/v\\d\\.\\d\\.\\d/"
 language: node_js
 node_js:
   - '8'
 script:
   - npx webpack -p
-  - rm -fr node_modules .editorconfig .prettierrc.js package-lock.json package.json webpack.config.js
-  - zip -r acf-commonmark.zip .
+before_deploy: 
+  - mkdir acf-commonmark
+  - cp -r *.php *.md assets fields lang acf-commonmark
+  - zip -r acf-commonmark.zip acf-commonmark
 deploy:
   - provider: releases
     api_key: '$GITHUB_API_KEY'
