@@ -21,6 +21,14 @@ import { debounce } from 'lodash';
     let initialValue = $field.find('.js-acf-field-commonmark-textarea').val();
     update_preview($field, initialValue);
 
+    $('#wp-link-submit').off();
+
+    $('#wp-link-submit').on('click', function(event) {
+      console.log(event);
+      console.log($('#wp-link-url').val());
+      //console.log(this.inputs());
+    });
+
     $field.find('.js-acf-field-commonmark-textarea').off();
     $field.find('.js-acf-field-commonmark-textarea').on(
       'change keyup paste',
@@ -39,6 +47,9 @@ import { debounce } from 'lodash';
         $field.find('.js-acf-field-commonmark-preview-tab').show();
       }
       if (target === 'code') {
+        wpLink.open('example_209490', '', 'TEST', null);
+        console.log(window.getSelection().toString());
+        $('#wp-link-url').val('http://google.com');
         $field.find('.js-acf-field-commonmark-code-tab').show();
         $field.find('.js-acf-field-commonmark-preview-tab').hide();
       }
