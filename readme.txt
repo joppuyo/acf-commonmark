@@ -33,6 +33,9 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 1.0.5 =
+* Deploy to w.org
+
 = 1.0.4 =
 * Remove .gitignore from build zip
 

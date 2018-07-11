@@ -1,6 +1,6 @@
 {
   "name": "acf-commonmark",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Markdown (CommonMark) field for Advanced Custom Fields",
   "repository": {
     "type": "git",
