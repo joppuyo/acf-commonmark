@@ -50,3 +50,11 @@
   line-height: 1.5;
   margin: 0;
 }
+
+.markdown-body ul {
+  list-style: initial;
+}
+
+.markdown-body ol {
+  margin-left: 0;
+}
