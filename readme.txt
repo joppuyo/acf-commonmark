@@ -17,6 +17,7 @@ An extension to Advanced Custom Fields that allows you to write text in Markdown
 = Compatibility =
 
 This ACF field type is compatible with:
+
 * ACF 5
 
 == Installation ==
